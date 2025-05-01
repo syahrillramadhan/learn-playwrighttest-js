@@ -3,7 +3,7 @@ const { test, expect } = require("@playwright/test");
 test("Home page", async ({ page }) => {
   await page.goto("https://demoblaze.com/index.html");
 
-  const pageTitle = page.title("STORE");
+  const pageTitle = page.title();
   console.log("Page title is:", pageTitle);
 
   await expect(page).toHaveTitle("STORE");
